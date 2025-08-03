@@ -7,12 +7,14 @@ import { Component } from '@angular/core';
   styleUrl: './product-list.component.css'
 })
 export class ProductList {
+  userName = 'Jack Sparrow';
   product = {
     name: 'Samsung Galaxy S21',
     price: 499,
     color: 'Snow White',
     discountValue: 12.5,
-    inStock: 0
+    inStock: 3,
+    productImage: '/samasung.jpg'
   }
 
   getDiscountedPrice(){
