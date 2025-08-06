@@ -1,0 +1,8 @@
+<app-filter></app-filter>
+<div class="ekart--products--container">
+    
+    @for(item of products; track item){
+        <app-product [product]="item"></app-product>
+    }
+    
+</div>
