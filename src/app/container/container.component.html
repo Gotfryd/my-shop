@@ -16,11 +16,9 @@
   <button (click)="incrementCartValue()">+</button>
   <input (input)="onNameChange($event)" /><br />
   <p>name={{ userName }}</p> -->
-  <app-search></app-search>
-  <app-product-list></app-product-list>
+  <app-search (searchTextChange)="setSearchText($event)"></app-search>
+  <app-product-list [searchText]="searchText"></app-product-list>
   <!-- @for(item of listOfString; track item){
     <p>Current element: {{ item }}</p>
   } -->
-  
-
 </div>

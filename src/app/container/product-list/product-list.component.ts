@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Product } from './product/product.component';
 import { Filter } from './filter/filter.component';
 
@@ -608,4 +608,13 @@ export class ProductList {
   totalProductOutOfStock = this.products.filter(
     (p) => p.is_in_inventory === false
   ).length;
+
+  selectedFilter: string = 'all';
+
+  onFilterChanged(value: string) {
+    this.selectedFilter = value;
+  }
+
+  @Input()
+  searchText: string = '';
 }
