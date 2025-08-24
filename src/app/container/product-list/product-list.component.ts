@@ -1,14 +1,18 @@
 import { Component, Input } from '@angular/core';
-import { Product } from './product/product.component';
+import { Product } from './../../Models/Product';
 import { Filter } from './filter/filter.component';
+import { ProductComponent } from './product/product.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-product-list',
-  imports: [Product, Filter],
+  imports: [Filter, ProductComponent, CommonModule],
   templateUrl: './product-list.component.html',
   styleUrl: './product-list.component.css',
 })
 export class ProductList {
+  selectedProduct: Product;
+
   products = [
     {
       id: 1,

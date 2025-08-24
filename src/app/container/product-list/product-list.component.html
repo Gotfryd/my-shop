@@ -8,6 +8,6 @@
   @for(item of products; track item){ @if( (selectedFilter === 'all' ||
   item.is_in_inventory.toString() === selectedFilter) && (
   item.name.toLowerCase().includes(searchText) || searchText === '' ) ) {
-  <app-product [product]="item"></app-product>
+  <app-product [product]="item" (click)="selectedProduct = item"></app-product>
   } }
 </div>
