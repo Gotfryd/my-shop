@@ -66,8 +66,13 @@
       </div>
     </div>
   </div>
+
   <div class="ekart-product-detail-addtoCart">
+    @if(product.is_in_inventory){
     <button class="btn-add-to-cart">ADD TO CART</button>
+    } @else{
+    <button class="btn-add-to-cart">NOTIFY ME</button>
+    }
   </div>
 </div>
 <div class="overlay"></div>
